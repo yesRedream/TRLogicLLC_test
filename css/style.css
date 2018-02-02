@@ -1,6 +1,3 @@
-body {
-}
-
 .container {
   width: 63.055%; /* 1024*100/1624 */
   max-width: 1024px;
@@ -16,15 +13,9 @@ body {
 	}
 }
 
-
-
-.header {
-  display: flex;
-  justify-content: center;
-}
-
 .header-wrap {
   position: fixed;
+  top: 0;
   z-index: 2;
   display: flex;
   justify-content: space-between;
@@ -46,19 +37,13 @@ body {
   height: 20px;
 }
 
-
-
-.aside {
-  display: flex;
-  justify-content: center;
-}
-
 .aside-wrap {
   position: fixed;
+  top: 40px;
   z-index: -1;
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  height: 1px;
 }
 
 #left-aside,
@@ -119,6 +104,8 @@ body {
 
 
 .content {
+  z-index: 1;
+  min-height: calc(100vh - 70px);
   margin-top: 40px;
   padding: 10px;
   background-color: #ffffff;
@@ -144,10 +131,20 @@ body {
   justify-content: space-between;
 }
 
+.content .main-content input[type=checkbox]:checked + .hidden {
+  display: block;
+}
+
+.content .main-content .hidden {
+  display: none;
+}
+
 .content .right-block {
   position: sticky;
   top: 40px;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  height: 300px;
   min-width: 198px;
   margin-top: 10px;
   background-color: #ffffff;
@@ -155,7 +152,6 @@ body {
 }
 
 .content .right-block p {
-  margin: 50px auto;
   writing-mode: tb-rl;
   text-align: center;
   font-size: 24px;
@@ -167,17 +163,15 @@ body {
 	}
 
 	.content .right-block {
-	  position: sticky;
-	  top: 40px;
 		width: 100%;
-	  min-width: 198px;
-	  margin-top: 10px;
+	  height: 50px;
 	  border: 1px dashed #f44336;
 	}
 
 	.content .right-block p {
-	  margin: 10px auto;
-    writing-mode: horizontal-tb;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    writing-mode: lr-tb;
 	}
 }
 
@@ -187,7 +181,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 30px;
+  height: 30px;
   color: #ffffff;
   background-color: #2196f3;
+}
+
+.footer p {
+  margin: 0;
 }
