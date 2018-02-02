@@ -140,6 +140,7 @@
 }
 
 .content .right-block {
+  position: -webkit-sticky;
   position: sticky;
   top: 40px;
   display: flex;
