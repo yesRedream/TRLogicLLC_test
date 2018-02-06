@@ -11,10 +11,26 @@ if($(window).width() < 420) {
 } else {
   $(".left-aside-btn").click(function(){
     $(".left-aside").toggleClass("active");
+    if ( $(".left-aside-wrap").hasClass("active") ) {
+      setTimeout(function(){
+        $(".left-aside-wrap").toggleClass("active");
+      }, 500);
+    }
+    else {
+      $(".left-aside-wrap").addClass("active");
+    }
   });
 
   $(".right-aside-btn").click(function(){
     $(".right-aside").toggleClass("active");
+    if ( $(".right-aside-wrap").hasClass("active") ) {
+      setTimeout(function(){
+        $(".right-aside-wrap").toggleClass("active");
+      }, 500);
+    }
+    else {
+      $(".right-aside-wrap").addClass("active");
+    }
   });
 }
 
