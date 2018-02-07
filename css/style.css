@@ -58,10 +58,9 @@
 .left-aside,
 .right-aside {
   position: fixed;
-  box-sizing: border-box;
   overflow: auto;
   width: 300px;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 72px);
   text-align: center;
   background-color: #ffffff;
   border: 1px dashed #f44336;
@@ -105,6 +104,7 @@
 @media only screen and (max-width : 600px) {
 	.left-aside,
 	.right-aside {
+    box-sizing: border-box;
 		width: 100%;
     height: calc(100vh - 40px);
 	}
