@@ -1,4 +1,4 @@
-if($(window).width() < 420) {
+if($(window).width() < 600) {
   $(".left-aside-btn").click(function(){
     $(".left-aside").toggleClass("active");
     $(".right-aside").removeClass("active");
